@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <label for="">Velocidade máxima permitida:</label>
+    <input type="number"id="vel_m">
+    <br>
+    <label for="vel">Velocidade do Carro:</label>
+    <input type="number" id="vel">
+    <button type="button" onclick="clicar()">Checar</button>
+    <div id="res"></div>
+
+    <script>
+        function clicar(){
+            var vel = Number(document.getElementById('vel').value)
+            var vel_m = Number(document.getElementById('vel_m').value)
+            var resul = document.getElementById('res')
+            if(vel > vel_m){
+                resul.innerHTML = 'Está acima do permitido. <strong>MULTADO</strong>.'
+            }else{
+                resul.innerHTML = 'Está na faixa permitida. Bom trabalho.'
+            }
+        }
+    </script>
+</body>
+</html>

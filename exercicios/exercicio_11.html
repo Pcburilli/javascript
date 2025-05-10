@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idades</title>
+</head>
+<body>
+    <h1>D MENOR OU D MAIOR</h1>
+    idade: <input type="number" id="idade">
+    <button type="button" onclick="clique()">Checar</button>
+    <div id="res"></div>
+
+    <script>
+        function clique(){
+            var idade = Number(document.getElementById('idade').value)
+            var resul = document.getElementById('res')
+            if (idade >= 18){
+                resul.innerHTML = `A sua idade é ${idade}. Você é d maior!`
+            }else {
+                resul.innerHTML = `A sua idade é ${idade}. Você é d menor!`
+            }
+        }
+    </script>
+</body>
+</html>
