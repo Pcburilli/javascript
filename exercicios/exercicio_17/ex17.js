@@ -2,16 +2,27 @@ function contar(){
     inicio = Number(document.getElementById('inicio').value)
     fim = Number(document.getElementById('fim').value)
     passo = Number(document.getElementById('passo').value)
-    if (inicio === ''|| fim === '' || passo == ''){
-        alert('preencha os dados corretamente.')
-    } else{
+    if (inicio.value == '' || fim.value == ''){
+        alert('Preencha os dados corretamente.')
+    } else if(passo <= 0){
+        alert('Passo inválido.')
+    } else {
+        if (inicio < fim){
         document.getElementById('res1').innerText = 'Contagem:'
         res = document.getElementById('res2')
-        res.innerText = `${inicio}`
-        inicio = inicio + passo
+        res.innerText = ''
         for(var x = inicio;x <= fim; x = x + passo){
-                res.innerText = `${`${res.innerText} -> ${x}`}`
-            }
+            res.innerText += ` ${x} \u{1F449}`
         }
-        res.innerText = `${`${res.innerText} -> Fim`}`
+        res.innerText += `Fim`
+        } else{
+        document.getElementById('res1').innerText = 'Contagem:'
+        res = document.getElementById('res2')
+        res.innerText = ''
+        for(var x = inicio; x >= fim; x = x - passo){
+            res.innerText += `${x} \u{1F449}`
+        }
+        res.innerText += ` Fim`
+        }
+    }
 }
