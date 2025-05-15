@@ -6,7 +6,7 @@ function tabuada() {
     } else{
         res.innerHTML = ''
         for (var x = 1; x <=10; x++) {
-        res.innerHTML = res.innerHTML + `<option value="valor${x}">${num} x ${x} = ${num * x}</option>`
+            res.innerHTML = res.innerHTML + `<option value="valor${x}">${num} x ${x} = ${num * x}</option>`
         }
     }
 }
