@@ -46,3 +46,6 @@ select {
     min-width: 100px;
     height: 100px;
 }
+.p_res {
+    margin-top: 10px;
+}
